@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -17,16 +18,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Terms',
+      url: '/terms',
+      icon: 'book'
+    },
+    {
+      title: 'Privacy',
+      url: '/privacy',
+      icon: 'eye-off'
     }
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public afAuth: AngularFireAuth,
+    private _route: Router
+
   ) {
     this.initializeApp();
   }
@@ -35,6 +44,12 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+    });
+  }
+  logoutClicked() {
+    this.afAuth.auth.signOut().then(() => {
+      // window.location.href = 'sign-up';
+      this._route.navigate(['/sign-up']);
     });
   }
 }

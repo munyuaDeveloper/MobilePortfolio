@@ -1,0 +1,7 @@
+{
+  "appId": "com.petermunyua",
+  "appName": "MobilePortfolio",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

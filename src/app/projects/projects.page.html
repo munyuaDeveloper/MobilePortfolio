@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My Projects</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card *ngFor="let pro of projects">
+    <img src="../../assets/pro1.jpeg" />
+    <ion-card-header>
+      <ion-card-subtitle>#{{pro.project_title}}</ion-card-subtitle>
+      <ion-card-title>
+        <h3>{{pro.project_title}}</h3>
+      </ion-card-title>
+      <span class="ion-float-right">Date: <i> 5<sup>th</sup> spet. 2018</i></span>
+    </ion-card-header>
+    <ion-card-content>
+      {{pro.project_desc}}
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-float-left">
+            <ion-button size="small" expand="block" [routerLink]="['/edit-project', pro.id]"><ion-icon name="create" slot="start"></ion-icon>Edit </ion-button>
+          </ion-col>
+          <ion-col class="ion-float-right">
+            <ion-button size="small" expand="full" [routerLink]="['/single-project', pro.id]"> <ion-icon name="eye" slot="start"></ion-icon>View </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <!-- fab placed to the bottom end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" routerLink="/new-project">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

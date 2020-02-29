@@ -14,9 +14,16 @@
               <ion-label>
                 {{p.title}}
               </ion-label>
+            
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+        <ion-menu-toggle>
+          <ion-item  (click)="logoutClicked()" [routerDirection]="'root'"  [routerLink]="['/sign-up']"> 
+          <ion-icon name="md-log-out" slot="start"></ion-icon>
+          Logout</ion-item>
+        </ion-menu-toggle>
+        
       </ion-content>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign-up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Sign up here!</ion-card-title>
+      <ion-item-divider></ion-item-divider>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+          <ion-item>
+            <ion-label position="floating">Enter your email</ion-label>
+            <ion-input type="email" formControlName="email" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Enter your password</ion-label>
+            <ion-input type="password" formControlName="password" ></ion-input>
+          </ion-item>
+          <ion-button expand="block" type="submit">Sign Up</ion-button>
+
+        </form>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

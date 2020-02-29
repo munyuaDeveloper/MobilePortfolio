@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Update Your Profile</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="clip_path">
+
+      </div>
+      <ion-item>
+        <ion-input type="file"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">User Name</ion-label>
+        <ion-input type="text" outline></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Current Password</ion-label>
+        <ion-input type="text" outline></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">New Password</ion-label>
+        <ion-input type="text" outline></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="text" outline></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button size="small" expand="full" color="danger">
+              <ion-icon name="close" slot="start"></ion-icon>Discard
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button size="small" expand="full" color="primary">
+              <ion-icon name="done-all" slot="start"></ion-icon>Save
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
