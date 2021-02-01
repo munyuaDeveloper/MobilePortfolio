@@ -3,7 +3,7 @@
     height: 150px;
     widows: 100%;
     clip-path: circle(27.5% at 50% 50%);
-    background-image: url('../../assets/images.jpeg');
+    background-image: url('../../assets/cropped.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -12,4 +12,9 @@
 }
 .action_buttons ion-button{
     font-size: 11px;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
 }

@@ -1,4 +1,4 @@
-package com.petermunyua;
+package munyua.com;
 
 import android.os.Bundle;
 

@@ -2,8 +2,13 @@
     height: 150px;
     widows: 100%;
     clip-path: circle(27.5% at 50% 50%);
-    // background-image: url('../../assets/images.jpeg');
+     background-image: url('../../assets/cropped.png');
     background-color: aliceblue;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
 }

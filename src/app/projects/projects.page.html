@@ -8,8 +8,8 @@
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-card *ngFor="let pro of projects">
-    <img src="../../assets/pro1.jpeg" />
+  <ion-card *ngFor="let pro of projects; let i=index">
+    <img src="../../assets/pro{{i+1}}.jpeg" />
     <ion-card-header>
       <ion-card-subtitle>#{{pro.project_title}}</ion-card-subtitle>
       <ion-card-title>
